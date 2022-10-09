@@ -14,14 +14,12 @@ import "./App.css";
 // ];
 
 function App() {
-  const [todos, setTodos] = useState([]);
-  console.log(todos);
   return (
     <div className="App">
       <TodoHeader headerTextContent="Todo" />
       <hr />
-      <TodoInput setTodos={setTodos} todos={todos} />
-      <TodoList todos={todos} setTodos={setTodos} />
+      <TodoInput />
+      <TodoList />
     </div>
   );
 }
