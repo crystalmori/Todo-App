@@ -1,7 +1,9 @@
-import { ADD_TODO, MOD_TODO, DEL_TODO } from "../actions";
+import { ADD_TODO, MOD_TODO, DEL_TODO, INIT_TODOS } from "../actions";
 
 export const reducer = (state = [], { type, payload }) => {
   switch (type) {
+    case INIT_TODOS:
+      return [...payload];
     case ADD_TODO:
       return [...state, { ...payload }];
     case MOD_TODO:
